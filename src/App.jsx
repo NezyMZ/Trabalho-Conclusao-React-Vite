@@ -15,19 +15,19 @@ function App() {
         <main>
             <nav>
                 <Link to="/">Home</Link>
-                {estaAutenticado && (
-                    <>
-                        <p>Olá, {nomeUsuario}!</p>
-                        <p>Você está logado!</p>
-                    </>
-                )}
+                <div className="nav-center">
+                    <p>Aliens</p> {/* Adicionar butões para próximas abas */}
+                </div>
                 {estaAutenticado ? (
-                    <button type="button" onClick={sair}>Sair</button>
+                    <div className="nav-right">
+                        <p>Olá, <strong className="usuario">{nomeUsuario}</strong>! Você está logado!</p>
+                        <button type="button" onClick={sair}>Sair</button>
+                    </div>
                 ) : (
-                    <>
+                    <div className="nav-right">
                         <Link to="/login">Login</Link>
                         <Link to="/cadastro">Cadastro</Link>
-                    </>
+                    </div>
                 )}
             </nav>
             <AppRouter />
