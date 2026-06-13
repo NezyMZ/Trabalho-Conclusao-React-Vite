@@ -2,12 +2,13 @@ function Home() {
     return (
         <section className="home">
             <h1>Diário de Avistamentos</h1>
+            <p className="home-subtitle">Registre, explore e compartilhe avistamentos extraterrestres de todo o universo.</p>
             <img
                 className="home-ufo-image"
-                src="https://news.asu.edu/sites/default/files/styles/block_image_16_9_lge/public/ufo_aliens_thought_huddle.jpg.png?itok=KiUitD8j"
-                alt="OVNI sobrevoando o céu"
+                src="src/assets/diario_avistamentos_banner.png"
+                alt="Banner Site"
             />
-            <p>Use o menu para acessar o cadastro e a lista de aliens.</p>
+            <p>Explore o desconhecido — cadastre aliens, registre avistamentos e desvende os mistérios do universo.</p>
         </section>
     );
 }
