@@ -3,6 +3,7 @@ import { useAuth } from "./contexts/AuthContext";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
+import Aliens from "./pages/Aliens";
 import Avistamentos from "./pages/Avistamentos";
 
 function RotaProtegida({ children }) {
@@ -27,6 +28,16 @@ function AppRouter() {
           </RotaProtegida>
         }
       />
+
+      <Route
+        path="/aliens"
+        element={
+          <RotaProtegida>
+            <Aliens />
+          </RotaProtegida>
+        }
+      />
+      
       <Route
         path="/avistamentos"
         element={

@@ -15,7 +15,7 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <div className="nav-center">
-          <p>Aliens</p> {/* Adicionar butões para próximas abas */}
+          <Link to="/aliens">Aliens</Link>
           <Link to="/avistamentos">Avistamentos</Link>
         </div>
         {estaAutenticado ? (
