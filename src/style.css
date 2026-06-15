@@ -8,8 +8,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #415A77;
-  color: #E0E1DD;
+  background-color: #415a77;
+  color: #e0e1dd;
 }
 
 .home {
@@ -19,12 +19,19 @@ body {
   background-color: #243259;
   flex-direction: column;
   align-items: center;
-  box-shadow: inset 6px 0 20px rgba(34, 211, 238, 0.3), inset -6px 0 20px rgba(34, 211, 238, 0.3);
+  box-shadow:
+    inset 6px 0 20px rgba(34, 211, 238, 0.3),
+    inset -6px 0 20px rgba(34, 211, 238, 0.3);
 }
 
 .home-ufo-image {
   width: 80%;
-  background: radial-gradient(circle at center, #1e3a5f 0%, #0d1b2a 50%, #060d18 100%);
+  background: radial-gradient(
+    circle at center,
+    #1e3a5f 0%,
+    #0d1b2a 50%,
+    #060d18 100%
+  );
   padding: 35px 0px 10px 35px;
   box-shadow: 0 0 30px rgba(34, 211, 238, 0.3);
   border-radius: 5px;
@@ -204,4 +211,205 @@ nav button:hover {
 
 .form-link:hover {
   color: #f0a500;
+}
+
+/* css , paginas avistamentos */
+
+.avistamentos {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  background-color: #243259;
+  min-height: calc(100vh - 50px);
+  box-shadow: inset 6px 0 20px rgba(34, 211, 238, 0.3), inset -6px 0 20px rgba(34, 211, 238, 0.3);
+}
+
+.avistamentos h2 {
+  color: #f0a500;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.avistamentos > p {
+  color: #a0aec0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.avistamentos > button {
+  background: #f0a500;
+  color: #111;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.avistamentos > button:hover {
+  background: #d4940a;
+}
+
+.avistamentos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.avistamento-item {
+  background: #1a2744;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+}
+.avistamento-item h3 {
+  margin: 0 0 10px;
+  color: #f0a500;
+}
+
+.avistamento-item:hover {
+  border-color: #f0a500;
+  background: #014657;
+}
+
+.avistamento-item p {
+  margin: 1px 0;
+  color: #e0e1dd;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.avistamento-item h3 {
+  font-size: 23px;
+}
+
+.avistamento-item p strong {
+  color: #68d391;
+}
+
+.btn-editar {
+  background: #1a59a0;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.btn-editar:hover {
+background: #17314e; 
+}
+
+.btn-excluir {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-excluir:hover {
+  background: #410909; 
+}
+
+/* css modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1a2744;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(240, 165, 0, 0.15);
+}
+
+/* css formulario */
+
+.form-avistamento {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-avistamento h2 {
+display: none;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header h3 {
+  margin: 0;
+  color: #f0a500;
+  font-size: 20px;
+}
+
+.close-button {
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  color: #080808;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.close-button:hover {
+  background: #d4940a;
+  color: #fff;
+}
+
+.form-avistamentos label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+.form-avistamentos input {
+  background: #243259;
+  border: 1px solid rgba(240, 165, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #e0e1dd;
+  font-size: 14px;
+}
+
+.form-avistamentos input:focus {
+  border-color: #f0a500;
+}
+.form-avistamentos button {
+  background: #f0a500;
+  color: #111;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+.form-avistamentos button:hover {
+  background: #d4940a;
 }
