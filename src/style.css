@@ -413,3 +413,7 @@ display: none;
 .form-avistamentos button:hover {
   background: #d4940a;
 }
+
+.btn-cdr {
+  margin-bottom: 15px;
+}

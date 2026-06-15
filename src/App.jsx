@@ -15,12 +15,10 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         
-        {/* Colocamos todos os links principais juntos aqui no centro */}
+        
         <div className="nav-center" style={{ display: "flex", gap: "25px", alignItems: "center" }}>
-          <p style={{ margin: 0 }}>Aliens</p> {/* Aba do seu colega */}
+          <Link to="/aliens" style={{ textDecoration: "none", color: "inherit" }}>Aliens</Link>
           <Link to="/avistamentos" style={{ textDecoration: "none", color: "inherit" }}>Avistamentos</Link>
-          
-          {/* O SEU LINK NO LUGAR CORRETO: */}
           <Link to="/Planetas" style={{ textDecoration: "none", color: "inherit" }}>Planetas</Link>
         </div>
 
