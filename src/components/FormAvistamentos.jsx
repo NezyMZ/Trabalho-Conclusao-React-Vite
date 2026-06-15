@@ -2,16 +2,17 @@ function FormAvistamentos({
   cadastrarAvistamento,
   setFormAvistamento,
   fecharModal,
-  formAvistammento,
+  formAvistamento,
+  modoEditar,
 }) {
   return (
     <div>
       <h2>Formulário de Avistamentos</h2>
 
-      <form classname="form-avistamentos" onSubmit={cadastrarAvistamento}>
+      <form className="form-avistamentos" onSubmit={cadastrarAvistamento}>
         <div className="form-header">
-          <h3>Adicionar Avistamento</h3>
-          <button type="button" classname="close-button" onClick={fecharModal}>
+          <h3>{modoEditar ? "Editar Avistamento" : "Adicionar Avistamento"}</h3>
+          <button type="button" className="close-button" onClick={fecharModal}>
             X
           </button>
         </div>
@@ -97,7 +98,7 @@ function FormAvistamentos({
         </label>
 
         <div className="form-buttons">
-          <button type="submit">Salvar</button>
+          <button type="submit">{modoEditar ? "Atualizar" : "Cadastrar"}</button>
           <button type="button" onClick={fecharModal}>
             Cancelar
           </button>
