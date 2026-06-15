@@ -3,6 +3,7 @@ import { useAuth } from "./contexts/AuthContext";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
+import Aliens from "./pages/Aliens";
 import Avistamentos from "./pages/Avistamentos";
 import { Planetas } from "./pages/Planetas"; 
 
@@ -26,6 +27,15 @@ function AppRouter() {
         element={
           <RotaProtegida>
             <Home />
+          </RotaProtegida>
+        }
+      />
+
+      <Route
+        path="/aliens"
+        element={
+          <RotaProtegida>
+            <Aliens />
           </RotaProtegida>
         }
       />
