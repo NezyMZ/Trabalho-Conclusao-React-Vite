@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import Avistamentos from "./pages/Avistamentos";
+import { Planetas } from "./pages/Planetas"; 
 
 function RotaProtegida({ children }) {
   const { estaAutenticado } = useAuth();
@@ -19,6 +20,7 @@ function AppRouter() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
+      
       <Route
         path="/home"
         element={
@@ -27,11 +29,21 @@ function AppRouter() {
           </RotaProtegida>
         }
       />
+      
       <Route
         path="/avistamentos"
         element={
           <RotaProtegida>
             <Avistamentos />
+          </RotaProtegida>
+        }
+      />
+
+      <Route
+        path="/Planetas"
+        element={
+          <RotaProtegida>
+            <Planetas />
           </RotaProtegida>
         }
       />
