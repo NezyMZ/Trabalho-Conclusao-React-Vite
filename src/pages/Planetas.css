@@ -7,9 +7,9 @@
 }
 
 .planetas-container h2 {
-  color: #333;
+  color: #ffffff;
   margin-bottom: 20px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f59e0b;
   padding-bottom: 10px;
 }
 
@@ -66,6 +66,7 @@
   cursor: pointer;
   margin-right: 8px;
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .btn-edit:hover {
